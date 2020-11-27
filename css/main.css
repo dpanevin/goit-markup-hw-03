@@ -1,0 +1,206 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --second-font: "Raleway", sans-serif;
+  --main-title-color: #212121;
+  --main-text-color: #757575;
+  --accent-color: #2196f3;
+}
+
+body {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============ COMPONENTS ============ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.about-title,
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.67;
+  text-align: center;
+  color: var(--main-title-color);
+}
+/* ============ COMPONENTS END ============ */
+/* ============ LOGO ============ */
+.header-logo,
+.footer-logo {
+  font-family: var(--second-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+.header-logo {
+  color: #000000;
+}
+/* .footer-logo {
+  color: #ffffff;
+} */
+.accent-logo {
+  color: var(--accent-color);
+}
+/* ============ LOGO END ============ */
+/* ============ HEADER ============ */
+.nav-list-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-title-color);
+  text-decoration: none;
+}
+
+.header-contacts-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.header-contacts-link:hover,
+.header-contacts-link:focus,
+.nav-list-link:hover,
+.nav-list-link:focus {
+  color: var(--accent-color);
+}
+.nav-list-link.current {
+  color: var(--accent-color);
+}
+/* ============ HEADER END ============ */
+/* ============ HERO ============ */
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ============ HERO END ============ */
+/* ============ FEATURES ============ */
+.features-list-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.features-list-descr {
+  color: var(--main-text-color);
+}
+/* ============ FEATURES END ============ */
+/* ============ ABOUT ============ */
+
+/* ============ ABOUT END ============ */
+/* ============ TEAM ============ */
+.team-list-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--main-title-color);
+}
+.team-list-position {
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--main-text-color);
+}
+/* ============ TEAM END ============ */
+
+/* # # # # # # # # # # # # portfolio.html # # # # # # # # # # # # */
+/* ============ FILTER ============ */
+.filter-btn {
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--main-title-color);
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+/* ============ FILTER END ============ */
+/* ============ PROJECTS ============ */
+.projects-list-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+}
+
+.projects-list-type {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--main-text-color);
+}
+
+.project-list-link {
+  text-decoration: none;
+}
+/* ============ PROJECTS END ============ */
+/* # # # # # # # # # # # # portfolio.html END # # # # # # # # # # # # */
+
+/* ============ FOOTER ============ */
+.footer-logo {
+  color: #ffffff;
+}
+.footer-contacts-list-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.footer-adress-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* ============ FOOTER END ============ */
+/* ============ временные копоненты ============ */
+footer {
+  background-color: #2f303a;
+}
+
+.hero-btn {
+  background-color: var(--accent-color);
+}
+
+.hero-title {
+  background-color: var(--main-text-color);
+}
