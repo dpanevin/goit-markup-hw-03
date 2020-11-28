@@ -17,6 +17,18 @@ body {
 
 ul {
   list-style: none;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0;
 }
 
 /* ============ COMPONENTS ============ */
@@ -42,6 +54,12 @@ ul {
   text-align: center;
   color: var(--main-title-color);
 }
+
+.container {
+  width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
 /* ============ COMPONENTS END ============ */
 /* ============ LOGO ============ */
 .header-logo,
@@ -53,17 +71,29 @@ ul {
   text-decoration: none;
 }
 .header-logo {
+  margin-right: 93px;
   color: #000000;
 }
-/* .footer-logo {
-  color: #ffffff;
-} */
+
 .accent-logo {
   color: var(--accent-color);
 }
 /* ============ LOGO END ============ */
 /* ============ HEADER ============ */
+.header > .container,
+.nav-list,
+.header-contacts-list {
+  display: flex;
+  align-items: center;
+}
+
+.header > .container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .nav-list-link {
+  display: block;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -71,7 +101,17 @@ ul {
   text-decoration: none;
 }
 
+.nav-list-item:not(:last-child),
+.header-contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-contacts-list {
+  margin-left: auto;
+}
+
 .header-contacts-link {
+  display: block;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -88,19 +128,35 @@ ul {
 .nav-list-link.current {
   color: var(--accent-color);
 }
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
 /* ============ HEADER END ============ */
 /* ============ HERO ============ */
+.hero > .container {
+  padding-top: 200px;
+  min-height: 600px;
+  text-align: center;
+}
+
 .hero-title {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .hero-btn {
+  display: inline-block;
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -108,10 +164,28 @@ ul {
   letter-spacing: 0.06em;
   color: #ffffff;
   text-decoration: none;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* ============ HERO END ============ */
 /* ============ FEATURES ============ */
+.features > .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-list-item {
+  width: 270px;
+}
+
 .features-list-title {
   font-weight: 700;
   font-size: 14px;
@@ -125,39 +199,145 @@ ul {
 }
 /* ============ FEATURES END ============ */
 /* ============ ABOUT ============ */
+.about > .container {
+  padding-bottom: 94px;
+}
 
+.about-title {
+  margin-bottom: 50px;
+}
+
+.about-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-list-img {
+  display: block;
+}
 /* ============ ABOUT END ============ */
 /* ============ TEAM ============ */
+.team {
+  background-color: #f5f4fa;
+}
+
+.team > .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-title {
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-list-item {
+  padding-bottom: 30px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .team-list-name {
+  margin-top: 30px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   color: var(--main-title-color);
+  text-align: center;
 }
 .team-list-position {
+  margin-top: 10px;
+
   font-size: 16px;
   line-height: 1.19;
   color: var(--main-text-color);
+  text-align: center;
 }
 /* ============ TEAM END ============ */
 
 /* # # # # # # # # # # # # portfolio.html # # # # # # # # # # # # */
+.portfolio > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* ============ FILTER ============ */
+.filter-list {
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
 .filter-btn {
+  padding: 6px 22px;
+
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   color: var(--main-title-color);
+
+  background: #f5f4fa;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.filter-list-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
   color: #ffffff;
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* ============ FILTER END ============ */
 /* ============ PROJECTS ============ */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.projects-list-item {
+  max-width: 370px;
+  box-sizing: border-box;
+  margin: 15px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.project-list-link {
+  display: block;
+  text-decoration: none;
+}
+
+.projects-list-img {
+  display: block;
+}
+
+.projects-list-item-discr {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+
 .projects-list-name {
   font-weight: 700;
   font-size: 18px;
@@ -167,40 +347,53 @@ ul {
 }
 
 .projects-list-type {
+  margin-top: 4px;
+
   font-size: 16px;
   line-height: 1.87;
   color: var(--main-text-color);
 }
 
-.project-list-link {
-  text-decoration: none;
-}
 /* ============ PROJECTS END ============ */
 /* # # # # # # # # # # # # portfolio.html END # # # # # # # # # # # # */
 
 /* ============ FOOTER ============ */
+.footer {
+  background-color: #2f303a;
+}
+
+.footer > .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-logo {
+  display: block;
+  margin-bottom: 20px;
+
   color: #ffffff;
 }
+
+.footer-contacts-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-contacts-list-link {
+  display: block;
+
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
 
 .footer-adress-link {
+  display: block;
+
   color: #ffffff;
   text-decoration: none;
 }
 /* ============ FOOTER END ============ */
 /* ============ временные копоненты ============ */
-footer {
+
+.hero {
   background-color: #2f303a;
-}
-
-.hero-btn {
-  background-color: var(--accent-color);
-}
-
-.hero-title {
-  background-color: var(--main-text-color);
 }
