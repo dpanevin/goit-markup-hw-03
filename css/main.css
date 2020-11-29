@@ -286,11 +286,12 @@ p {
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.63;
   color: var(--main-title-color);
+  letter-spacing: inherit;
 
   background: #f5f4fa;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 4px;
 
   cursor: pointer;
